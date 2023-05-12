@@ -3,9 +3,6 @@
 [hello.go](hello.go) 例子:
 
 ```go
-//go:build ignore
-// +build ignore
-
 package main
 
 import (
