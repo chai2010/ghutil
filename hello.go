@@ -1,8 +1,3 @@
-# 用 Go 获取 Github 常用信息
-
-[hello.go](hello.go) 例子:
-
-```go
 //go:build ignore
 // +build ignore
 
@@ -18,7 +13,7 @@ import (
 )
 
 var (
-	flagUserName = flag.String("u", "chai2010", "set user name")
+	flagUserName = flag.String("u", "KusionStack", "set user name")
 )
 
 func main() {
@@ -42,16 +37,3 @@ func main() {
 	fmt.Printf("%s/{*}:StargazersCount: %d\n", *flagUserName, starCount)
 	fmt.Printf("%s/{*}:ForksCount:      %d\n", *flagUserName, forkCount)
 }
-```
-
-设置好 `GITHUB_ACCESS_TOKEN` 环境变量, 然后执行:
-
-```
-$ go run hello.go -u=chai2010
-chai2010/{*}:StargazersCount: 25283
-chai2010/{*}:ForksCount:      3978
-
-$ go run hello.go -u=KusionStack
-KusionStack/{*}:StargazersCount: 1206
-KusionStack/{*}:ForksCount:      200
-```
